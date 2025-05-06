@@ -245,22 +245,8 @@ def create_pdf(filename, base_image, placed_items, mutate=False):
         text_color = get_contrasting_color(avg_color)
         draw_text(c, text, item['x'], item['y'], item['angle'], item['font_size'], text_color, item['font_name'])
 
-    # for item in placed_items:
-    #     text = item['text']
-    #     if mutate:
-    #         text = mutate_text(text)
-    #     avg_color = sample_region_average(base_image, item['x'], item['y'], item['width'], item['height'])
-    #     text_color = get_contrasting_color(avg_color)
-    #     draw_text(c, text, item['x'], item['y'], item['angle'], item['font_size'], text_color, item['font_name'])
-
     c.showPage()
     c.save()
-
-# MAIN EXECUTION
-# if __name__ == "__main__":
-#     base_image, placed_items = generate_page(return_data_only=True)
-#     create_pdf("output_original.pdf", base_image, placed_items, mutate=False)
-#     create_pdf("output_mutated.pdf", base_image, placed_items, mutate=True)
 
 if __name__ == "__main__":
     OUTPUT_DIR = "output_pdfs"
