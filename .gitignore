@@ -1,5 +1,10 @@
+__pycache__/
+logs/
 new_output*
 new_Images*
 output_pdfs/
 clipart/
 augraphy_cache/
+*.pdf
+*.jpg
+*.png
